@@ -62,7 +62,7 @@ func main() {
 	opentracing.SetGlobalTracer(t)
 
 	// Set router
-	router := NewRouter()
+	router := muxtrace.NewRouter()
 	router.HandleFunc("/example", ExampleHandler).Methods(http.MethodGet)
 
 	// Run server
