@@ -1,5 +1,18 @@
 # muxtrace
+
+![Gorilla Logo](http://www.gorillatoolkit.org/static/images/gorilla-icon-64.png)
+
 A mux wrapper with opentracer
+
+---
+* [Getting Started](#getting-started)
+* [Installing](#installing)
+* [Example](#example)
+* [Build With](#built-with)
+* [Contributing](#contributing)
+* [Versioning](#versioning)
+* [Authors](#authors)
+---
 
 ## Getting Started
 
@@ -21,14 +34,6 @@ With go:
 
 ```
 $ go get -u github.com/anthonyhartanto/muxtrace
-```
-
-## Running the tests
-
-Run the unit test
-
-```
-go test -cover
 ```
 
 ## Example
