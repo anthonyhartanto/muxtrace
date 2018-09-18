@@ -42,22 +42,37 @@ $ go get -u github.com/anthonyhartanto/muxtrace
 package main
 
 import (
-    "fmt"
-    "github.com/anthonyhartanto/muxtrace"
-    "net/http"
+	"fmt"
+	"github.com/anthonyhartanto/dd-trace-go/ddtrace/opentracer"
+	"github.com/anthonyhartanto/dd-trace-go/ddtrace/tracer"
+	"github.com/opentracing/opentracing-go"
+	"github.com/anthonyhartanto/muxtrace"
+	"net/http"
 )
 
-func main() {
-
-    router := muxtrace.NewRouter()
-    
-    // Run server
-    server := &http.Server{
-        Addr:    ":8080",
-        Handler: router,
-    }
-    server.ListenAndServe()
+// ExampleHandler handle example
+func ExampleHandler(rw http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(rw, "OK")
 }
+
+func main() {
+	// Set tracer
+	t := opentracer.New(tracer.WithServiceName("example-service"))
+	defer tracer.Stop()
+	opentracing.SetGlobalTracer(t)
+
+	// Set router
+	router := NewRouter()
+	router.HandleFunc("/example", ExampleHandler).Methods(http.MethodGet)
+
+	// Run server
+	server := &http.Server{
+		Addr:    ":8080",
+		Handler: router,
+	}
+	server.ListenAndServe()
+}
+
 ```
 
 
