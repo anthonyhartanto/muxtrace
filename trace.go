@@ -25,7 +25,7 @@ func TraceAndServe(h http.Handler, w http.ResponseWriter, r *http.Request, servi
 		},
 	}, spanopts...)
 
-	span, ctx := opentracing.StartSpanFromContext(r.Context(), resource, opts...)
+	span, ctx := opentracing.StartSpanFromContext(r.Context(), service, opts...)
 	defer span.Finish()
 
 	w = wrapResponseWriter(w, span)
