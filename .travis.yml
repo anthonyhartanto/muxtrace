@@ -3,7 +3,8 @@ language: go
 script:
   - go test -race
 go:
-  - 1.6.x
-  - 1.7.x
   - 1.8.x
-  - 1.9.x
+  
+before_script:
+  - go install ./vendor/github.com/opentracing/opentracing-go
+  - go install ./vendor/github.com/gorilla/mux
