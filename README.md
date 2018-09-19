@@ -1,4 +1,4 @@
-# muxtrace  [![GoDoc](https://godoc.org/github.com/anthonyhartanto/muxtrace?status.svg)](https://godoc.org/github.com/anthonyhartanto/muxtrace)
+# muxtrace [![Go Report Card](https://goreportcard.com/badge/github.com/anthonyhartanto/muxtrace)](https://goreportcard.com/report/github.com/anthonyhartanto/muxtrace) [![GoDoc](https://godoc.org/github.com/anthonyhartanto/muxtrace?status.svg)](https://godoc.org/github.com/anthonyhartanto/muxtrace)
 
 ![Gorilla Logo](http://www.gorillatoolkit.org/static/images/gorilla-icon-64.png)
 
