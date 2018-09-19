@@ -77,6 +77,9 @@ func main() {
 
 ```
 
+Result on Datadog:
+
+![Datadog Result](https://raw.githubusercontent.com/anthonyhartanto/muxtrace/master/Screen%20Shot%202018-09-19%20at%2010.33.18.png)
 
 ## Built With
 
