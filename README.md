@@ -2,7 +2,9 @@
 
 ![Gorilla Logo](http://www.gorillatoolkit.org/static/images/gorilla-icon-64.png)
 
-A mux wrapper with opentracer
+**What is opentracing ?** Vendor neutral APIs and instrumentation for distributed tracing.
+
+**Why you need muxtrace ?** For example you are using Datadog Tracer to monitor your application performance on http request. We rely on both Datadog and Mux router. Unfortunately, the datadog package for tracing http request on mux was not compatible with opentracing. 
 
 ---
 * [Getting Started](#getting-started)
