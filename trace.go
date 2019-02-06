@@ -12,6 +12,10 @@ import (
 func TraceAndServe(h http.Handler, w http.ResponseWriter, r *http.Request, service, resource string, spanopts ...opentracing.StartSpanOption) {
 	opts := append([]opentracing.StartSpanOption{
 		opentracing.Tag{
+			Key:   "span.type",
+			Value: "web",
+		},
+		opentracing.Tag{
 			Key:   "http.method",
 			Value: r.Method,
 		},
